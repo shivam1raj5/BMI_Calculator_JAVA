@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BMI_JAVA_Application</string>
+    <string name="strWeight">Enter Weight</string>
+    <string name="strHeightFt">Enter Height (Ft)</string>
+    <string name="strHeightInch">Enter Height (Inch)</string>
+    <string name="strBtnText">Calculate BMI</string>
+    <string name="strResultText">Result</string>
+
 </resources>

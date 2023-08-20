@@ -5,28 +5,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:ems="10"
-        android:hint="Enter Your Weight"
+        android:hint="@string/strWeight"
         android:id="@+id/edtWeight"
         android:inputType="number" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:ems="10"
-        android:hint="Enter Your Height (in Ft)"
+        android:hint="@string/strHeightFt"
         android:id="@+id/editHeightFt"
         android:inputType="number" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:ems="10"
-        android:hint="Enter Your Height (in Inch)"
+        android:hint="@string/strHeightInch"
         android:id="@+id/editHeightInch"
         android:inputType="number" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="11dp"
+        android:text="@string/strBtnText"
+        android:id="@+id/btnCalculate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textResult"
+        android:text="@string/strResultText"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_margin="11dp" />
+
 
 </LinearLayout>
