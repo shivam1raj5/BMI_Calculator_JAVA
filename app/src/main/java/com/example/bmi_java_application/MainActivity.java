@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,11 +19,14 @@ public class MainActivity extends AppCompatActivity {
         EditText edtWeight, editHeightFt, editHeightInch;
         Button btnCalculate;
         TextView textResult;
+        LinearLayout llMain;
+
         edtWeight = findViewById(R.id.edtWeight);
         editHeightFt = findViewById(R.id.editHeightFt);
         editHeightInch = findViewById(R.id.editHeightInch);
         btnCalculate = findViewById(R.id.btnCalculate);
         textResult = findViewById(R.id.textResult);
+        llMain = findViewById(R.id.llMain);
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,10 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
                 if(bmi>25){
                     textResult.setText("You're OverWeight.");
+                    llMain.setBackgroundColor(getResources().getColor(R.color.colOW));
+
                 } else if (bmi<18) {
                     textResult.setText("You're UnderWeight.");
+                    llMain.setBackgroundColor(getResources().getColor(R.color.colUW));
                 } else {
                     textResult.setText("You're Healthy.");
+                    llMain.setBackgroundColor(getResources().getColor(R.color.colH));
                 }
             }
         });
