@@ -2,6 +2,7 @@ package com.example.bmi_java_application;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         llMain = findViewById(R.id.llMain);
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 int wt = Integer.parseInt(edtWeight.getText().toString());
